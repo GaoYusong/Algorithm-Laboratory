@@ -14,11 +14,11 @@ if (test)
 
   include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-  add_executable(runUnitTests src/partition_test.cc)
+  add_executable(runtests src/partition_test.cc)
 
-  target_link_libraries(runUnitTests gtest gtest_main)
+  target_link_libraries(runtests gtest gtest_main)
 
-  target_link_libraries(runUnitTests partition)
+  target_link_libraries(runtests partition)
 
 
 endif()

@@ -1,7 +1,9 @@
 #ifndef ALGOLAB_PARTITION_H_
 #define ALGOLAB_PARTITION_H_
 
-int Gcd(int, int);
+int Partition(int [], int, int, int);
+
+void Sort(int [], int);
 
 #endif
 
