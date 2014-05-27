@@ -1,14 +1,11 @@
-#include <stdio.h>
 #include <algorithm>
 #include <map>
 #include "partition.h"
 #include "gtest/gtest.h"
 
 
-
 TEST(Partition, All)
 {
-
   int a[] = {1, 6, 2, 10, 6, 6, 6, 7, 8, 1, 2, 3, 6, 10, 15, 20, 4};
   int n = sizeof(a) / sizeof(int);
   int idx = 4;
@@ -19,6 +16,7 @@ TEST(Partition, All)
     aset[a[i]]++;
   }
   Partition(a, 0, n, idx);
+  
   for (int i = 0; i < n; i++) {
     aset[a[i]]--;
   }
@@ -57,29 +55,6 @@ TEST(Partition, All)
   EXPECT_TRUE(ok);
 }
 
-TEST(Sort, All)
-{
-
-  int a[] = {1, 6, 2, 10, 6, 6, 6, 7, 8, 1, 2, 3, 6, 10, 15, 20, 4};
-  int n = sizeof(a) / sizeof(int);
-  int *b = new int[n];
-  for (int i = 0; i < n; i++) {
-    b[i] = a[i];
-  }
-  std::sort(b, b + n);
-  Sort(a, n);
-  bool ok = true;
-  for (int i = 0; i < n; i++) {
-    if (a[i] != b[i]) {
-      ok = false;
-      break;
-    }
-  }
-  delete [] b;
-
-  EXPECT_TRUE(ok);
-
-}
 
 
 
