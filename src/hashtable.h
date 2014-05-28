@@ -1,8 +1,10 @@
+#ifndef ALGOLAB_HASHTABLE_H_
+#define ALGOLAB_HASHTABLE_H_
 
 #include <string>
 
 class HashTable {
- public:
+public:
   HashTable();
   
   bool Insert(const std::string &key, const std::string &val);
@@ -18,7 +20,7 @@ class HashTable {
 
   static const int MOD = 1007;
   
- private:
+private:
   int Find(const std::string &key, int h);
   int Hash(const std::string &s);
   
@@ -30,3 +32,4 @@ class HashTable {
   int cur_;
   
 };
+#endif
