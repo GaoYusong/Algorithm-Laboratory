@@ -36,4 +36,10 @@ TEST(QuickSort2, All)
   EXPECT_TRUE(ok);
 }
 
+TEST(MergeSort, All)
+{
+  bool ok = TestSort(MergeSort);
+  EXPECT_TRUE(ok);
+}
+
 
