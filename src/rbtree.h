@@ -1,3 +1,6 @@
+#ifndef ALGOLAB_RBTREE_H_
+#define ALGOLAB_RBTREE_H_
+
 #include <stdio.h>
 #include <assert.h>
 #include <string>
@@ -51,12 +54,13 @@ public:
     root_->color = BLACK;
   }
 
+
   //@TODO implement it
   void Delete(const KeyT &key)
   {
     
   }
-
+  
   bool Equal(const RBTree &rbtree) const
   {
     return Equal(root_, rbtree.root_);
@@ -303,3 +307,4 @@ private:
 
   RBTreeNodeP root_;
 };
+#endif

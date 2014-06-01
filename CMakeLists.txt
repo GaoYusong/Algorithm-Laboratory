@@ -4,7 +4,7 @@ option(test "Build all tests." ON)
 
 project (AlgoLab)
 
-add_library(algolib src/partition.cc src/hashtable.cc src/sort.cc)
+add_library(algolib src/partition.cc src/hashtable.cc src/sort.cc src/dijkstra.cc)
 
 if (test)
 
@@ -14,7 +14,7 @@ if (test)
 
   include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-  add_executable(runtests src/partition_test.cc src/hashtable_test.cc src/sort_test.cc src/heap_test.cc src/rbtree_test.cc)
+  add_executable(runtests src/partition_test.cc src/hashtable_test.cc src/sort_test.cc src/heap_test.cc src/rbtree_test.cc src/splay_test.cc src/dijkstra_test.cc)
 
   target_link_libraries(runtests gtest gtest_main)
 

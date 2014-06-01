@@ -26,9 +26,15 @@ TEST(RBTree, Basic)
   EXPECT_TRUE(r);
   ASSERT_EQ(74, val);
   
-  r = rbtree.Get(10, val);
-  EXPECT_FALSE(r);
-  
+  EXPECT_FALSE(rbtree.Get(10, val));
+
+  /*
+  rbtree.Delete(4);
+  EXPECT_FALSE(rbtree.Get(4, val));
+
+  rbtree.Delete(3);
+  EXPECT_FALSE(rbtree.Get(3, val));
+  */
 }
 
 ::testing::AssertionResult AssertRBTreeEqual(const char *expected_expr,
