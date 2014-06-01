@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <string>
 #include "hashtable.h"
@@ -54,7 +55,7 @@ std::string GenString(int code)
     code /= 26;
   } while (code);
 
-  reverse(r.begin(), r.end());
+  std::reverse(r.begin(), r.end());
   return r;
 }
 
