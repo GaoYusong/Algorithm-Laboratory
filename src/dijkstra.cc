@@ -5,6 +5,8 @@
 #include <functional>
 #include "dijkstra.h"
 
+const int Graph::INF = 1 << 20;
+
 std::vector<int> DijkstraNN(Graph &g, int s)
 {
   std::vector<int> d(g.vsize(), Graph::INF);

@@ -38,7 +38,7 @@ public:
     return esize_;
   }
 
-  static const int INF = 1 << 20;
+  static const int INF;
 protected:
   bool checkv(int v)
   {
